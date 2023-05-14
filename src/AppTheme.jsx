@@ -4,27 +4,20 @@ export const appTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#F50057",
+      main: "#F50057"
     },
     secondary: {
-      main: "#f50057",
-    },
+      main: "#3c4358"
+    }
   },
   components: {
     MuiButton: {
       defaultProps: {},
       styleOverrides: {
-        root: ({ ownerState }) => ({
-          ...(ownerState.variant === "contained" &&
-            ownerState.color === "primary" && {
-              backgroundColor: "#F50057",
-              "&:hover": {
-                backgroundColor: "#DE3434",
-                boxShadow: 12,
-              },
-            }),
-        }),
-      },
+        root: {
+          borderRadius: 0
+        }
+      }
     },
 
     MuiTextField: {
@@ -32,11 +25,14 @@ export const appTheme = createTheme({
         root: {
           "&.MuiOutlinedInput-root.Mui-disabled": {
             border: 1,
-            borderColor: "#F50057",
+            borderColor: "#F50057"
           },
-        },
-      },
+          [`& fieldset`]: {
+            borderRadius: 0
+          }
+        }
+      }
     },
   },
-  typography: {},
+  typography: {}
 });
