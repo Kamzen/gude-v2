@@ -51,7 +51,7 @@ const RegisterUser = () => {
                     ml: 1,
                     fontStyle: "italic",
                     fontWeight: "bolder",
-                    color: "#34495E",
+                    color: "#34495E"
                   }}
                 >
                   Login
@@ -59,38 +59,42 @@ const RegisterUser = () => {
               </Typography>
             </Stack>
 
-            <Grid container>
-              <Grid item xs={12} md={6}>
-                <Button
-                  variant="outlined"
-                  fullWidth
-                  sx={{
-                    fontWeight: "bolder",
-                  }}
-                >
-                  Join with gmail
-                </Button>
+            <Stack>
+              <Grid container spacing={2}>
+                <Grid item xs={12} md={6}>
+                  <Button
+                    variant="outlined"
+                    fullWidth
+                    sx={{
+                      fontWeight: "bolder",
+                      fontSize: 12
+                    }}
+                  >
+                    Join with gmail
+                  </Button>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <Button
+                    variant="outlined"
+                    fullWidth
+                    sx={{
+                      fontWeight: "bolder",
+                      fontSize: 12
+                    }}
+                    startIcon={<FacebookIcon sx={{ color: "#2374E1" }} />}
+                  >
+                    Join with facebook
+                  </Button>
+                </Grid>
               </Grid>
-              <Grid item xs={12} md={6}>
-                <Button
-                  variant="outlined"
-                  fullWidth
-                  sx={{
-                    fontWeight: "bolder",
-                  }}
-                  startIcon={<FacebookIcon sx={{ color: "#2374E1" }} />}
-                >
-                  Join with facebook
-                </Button>
-              </Grid>
-            </Grid>
+            </Stack>
             <Formik
               initialValues={{
                 email: "",
                 password: "",
                 status: "",
                 firstName: "",
-                lastName: "",
+                lastName: ""
               }}
               validationSchema={Yup.object().shape({
                 email: Yup.string()
@@ -99,7 +103,7 @@ const RegisterUser = () => {
                 password: Yup.string().required("Please enter password"),
                 status: Yup.string().required("Please select status"),
                 firstName: Yup.string().required("Please enter first name"),
-                lastName: Yup.string().required("Please enter last name"),
+                lastName: Yup.string().required("Please enter last name")
               })}
             >
               {(formik) => {
@@ -163,11 +167,8 @@ const RegisterUser = () => {
                         <Button
                           variant="contained"
                           type="submit"
-                          sx={{
-                            width: "100%",
-                            borderRadius: 1,
-                            backgroundColor: "secondary.main",
-                          }}
+                          sx={{ backgroundColor: "primary.main" }}
+                          fullWidth
                         >
                           Continue
                         </Button>
