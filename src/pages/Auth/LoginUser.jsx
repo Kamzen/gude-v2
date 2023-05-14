@@ -121,8 +121,7 @@ const LoginUser = () => {
                           type="submit"
                           sx={{
                             width: "100%",
-                            borderRadius: 1,
-                            backgroundColor: "secondary.main",
+                            backgroundColor: "primary.main",
                             fontWeight: "bolder",
                           }}
                         >
