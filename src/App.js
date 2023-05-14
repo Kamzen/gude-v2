@@ -10,6 +10,8 @@ import { appTheme } from "./AppTheme";
 import LoginUser from "./pages/Auth/LoginUser";
 import RegisterUser from "./pages/Auth/RegisterUser";
 import Root from "./pages/Root";
+import DesktopNavigation from "./components/Navigation/DesktopNavigation";
+import Home from "./pages/Home";
 
 function App() {
   const router = createBrowserRouter(
@@ -19,6 +21,13 @@ function App() {
         element={<Root />}
         errorElement={"<h1>This route does not exist</h1>"}
       >
+        <Route
+          path="/"
+          element={<DesktopNavigation />}
+          errorElement={"<h1>This route does not exist</h1>"}
+        >
+          <Route path="home" element={<Home />} />
+        </Route>
         <Route path="login" index element={<LoginUser />} />
         <Route path="register" element={<RegisterUser />} />
       </Route>
