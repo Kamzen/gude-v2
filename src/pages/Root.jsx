@@ -1,10 +1,13 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
+import React from "react";
+import { Outlet } from "react-router-dom";
+import { Stack } from "@mui/material";
 
 const Root = () => {
   return (
-    <Outlet />
-  )
-}
+    <Stack>
+      <Outlet />
+    </Stack>
+  );
+};
 
-export default Root
+export default Root;
