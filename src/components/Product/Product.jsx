@@ -18,12 +18,12 @@ import LocalMallIcon from "@mui/icons-material/LocalMall";
 
 const Product = ({ ...otherProps }) => {
   return (
-    <Grid item xs={12} md={3} height={350} {...otherProps}>
-      <Card sx={{ height: "100%", boxShadow: "2px 2px 2px 2px lightgray" }}>
+    <Grid item xs={12} md={3} height={400} {...otherProps}>
+      <Card sx={{ height: "100%", boxShadow: "2px 2px 2px 2px lightgray"  }}>
         <CardContent sx={{ height: "100%", p: 0, position: "relative" }}>
           <Stack
-            height="50%"
-            border={1}
+            height="60%"
+            borderBottom={1}
             borderColor="lightgray"
             py={2}
             // sx={{ backgroundColor: "lightgray" }}
@@ -52,8 +52,8 @@ const Product = ({ ...otherProps }) => {
               </Box>
             </Stack>
           </Stack>
-          <Stack paddingX={1} spacing={2}>
-            <Typography fontWeight="bolder">Product Name</Typography>
+          <Stack paddingX={1} spacing={1} mt={2}>
+            <Typography fontWeight="bolder" noWrap>Product Namhvchgchfxchvxfhcbvcfgxtfjxhfdtxdxfcgnxdfhtxhdrtge</Typography>
             <Typography
               fontSize={12}
               fontWeight="bolder"
@@ -67,13 +67,12 @@ const Product = ({ ...otherProps }) => {
               alignItems="center"
             >
               <Typography
-                fontSize={12}
                 component={Stack}
                 direction="row"
                 alignItems="center"
               >
-                <TagIcon />
-                SKU : 12132432
+                <TagIcon fontSize="smal" />
+                12132432
               </Typography>
               <Typography fontWeight="bolder">R399</Typography>
             </Stack>
@@ -83,10 +82,10 @@ const Product = ({ ...otherProps }) => {
               alignItems="center"
             >
               <Typography component={Stack} direction="row" alignItems="center">
-                <LocationOnIcon /> Johannesburg
+                <LocationOnIcon fontSize="small" /> Johannesburg
               </Typography>
               <Typography component={Stack} direction="row" alignItems="center">
-                <CalendarMonthIcon /> 2022/05/13
+                <CalendarMonthIcon fontSize="small" /> 2022/05/13
               </Typography>
             </Stack>
             <Stack
