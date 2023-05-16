@@ -9,7 +9,7 @@ const ProductBanner = ({ img, title, desc }) => {
       item
       xs={12}
       md={9}
-      height={350}
+      height={400}
       border={1}
       sx={{
         backgroundImage: `url(${bannerImg})`,
