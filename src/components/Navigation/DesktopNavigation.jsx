@@ -133,8 +133,9 @@ export default function DesktopNavigation() {
                 variant="outlined"
                 placeholder="Search Items"
                 size="small"
+                fullWidth
                 sx={{
-                  width: "70%",
+                  // width: "70%",
                   [`& fieldset`]: {
                     borderTopLeftRadius: 20,
                     borderBottomLeftRadius: 20,
